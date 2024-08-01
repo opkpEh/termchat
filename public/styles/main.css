@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Kanit&display=swap');
+
+:root {
+    --primary-bg-color: #ffffff;
+    --secondary-bg-color: #000000;
+    --primary-font-color: #edf0f1;
+    --hover-font-color: #0088a9;
+    --button-bg-color: rgba(0, 136, 169, 1);
+    --button-hover-bg-color: rgba(0, 136, 169, 0.8);
+    --primary-text-color: #000000;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    background: var(--primary-bg-color);
+}
+
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+li, a, button {
+    background-color: var(--secondary-bg-color);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--primary-font-color);
+}
+
+header {
+    margin-top: 0.5rem;
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    justify-content: space-between;
+    padding: 0.8rem 1%;
+    width: 80rem;
+    border-radius: 5rem;
+    align-items: center;
+}
+
+.logo {
+    cursor: pointer;
+}
+.logo img{
+    background-color: var(--secondary-bg-color);
+    float: left;
+}
+
+.nav_links {
+    background-color: var(--secondary-bg-color);
+    list-style: none;
+}
+
+.nav_links li {
+    background-color: var(--secondary-bg-color);
+    display: inline-block;
+    padding: 0 20px;
+}
+
+.nav_links li a {
+    background-color: var(--secondary-bg-color);
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.nav_links li a:hover {
+    color: var(--hover-font-color);
+}
+
+button {
+    padding: 9px 25px;
+    background-color: var(--button-bg-color);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+button:hover {
+    background-color: var(--button-hover-bg-color);
+}
+
+.nav-corner{
+    background-color: var(--secondary-bg-color);
+    display: flex;
+    width: 10rem;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-corner img{
+    background-color: var(--secondary-bg-color);
+}
+
+.chat-box {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.chat-box form {
+    font-style: normal;
+    display: flex;
+    width: 100%;
+    max-width: 600px;
+}
+
+.chat-box input {
+    font-family: "Kanit", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    flex: 1;
+    padding: 0.5rem 1rem;
+}
+
+.chat-box button {
+    margin-left: 0.5rem;
+}
+
+.messages li {
+    color: var(--primary-text-color);
+    background-color: var(--primary-bg-color);
+    margin-left: 0.5rem;
+}
