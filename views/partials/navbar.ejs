@@ -1,19 +1,51 @@
 <%-include("header.ejs")%>
-
-    <div class="container">
-        <header>
-            <div class="logo"> <a href="/"><img src="/images/logo.png" alt="logo"></a> </div>
-            <nav>
-                <ul class="nav_links">
-                    <li><a href="#">Contact</a></li>
-                    <li><a href="#">Friends</a></li>
-                    <li><a href="#">FQA</a></li>
-                </ul>
-            </nav>
-            <div class="nav-corner">
-                <a class="cta" href="/chat/"><button>Chat</button></a>
-                <img class="user-pic" src="/images/profile.png">
+<div class="container">
+    <header>
+        <div class="logo">
+            <a href="/"><img src="/images/logo.png" alt="logo"></a>
+        </div>
+        <nav>
+            <ul class="nav_links">
+                <li><a href="#">Contact</a></li>
+                <li><a href="#">Friends</a></li>
+                <li><a href="#">FQA</a></li>
+            </ul>
+        </nav>
+        <div class="nav-corner">
+            <a class="cta" href="/chat/"><button>Chat</button></a>
+            <div class="profile-menu">
+                <img class="user-pic-main" src="/images/user.jpg" alt="User Profile">
+                <div class="sub-menu-wrap">
+                    <div class="sub-menu">
+                        <div class="user-info">
+                            <img class="user-pic-sub" src="/images/user.jpg" alt="User Profile">
+                            <h2>Casper</h2>
+                        </div>
+                        <ul class="dropdown-menu">
+                            <li><a href="/profile">Profile</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Logout</a></li>
+                        </ul>
+                    </div>
+                </div>
             </div>
+        </div>
+    </header>
+</div>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const profileMenu = document.querySelector('.profile-menu');
+        const subMenuWrap = document.querySelector('.sub-menu-wrap');
 
-        </header>
-    </div>
+        profileMenu.addEventListener('click', () => {
+            subMenuWrap.style.display = subMenuWrap.style.display === 'block' ? 'none' : 'block';
+        });
+
+        document.addEventListener('click', (e) => {
+            if (!profileMenu.contains(e.target)) {
+                subMenuWrap.style.display = 'none';
+            }
+        });
+    });
+
+</script>

@@ -9,6 +9,7 @@
     --button-bg-color: rgba(0, 136, 169, 1);
     --button-hover-bg-color: rgba(0, 136, 169, 0.8);
     --primary-text-color: #000000;
+    --secondary-text-color: #ffffff;
 }
 
 * {
@@ -71,7 +72,8 @@ header {
 }
 
 button {
-    padding: 9px 25px;
+    padding: 0.8rem 25px;
+    margin-right: 0.8rem;
     background-color: var(--button-bg-color);
     border: none;
     border-radius: 50px;
@@ -86,7 +88,7 @@ button:hover {
 .nav-corner{
     background-color: var(--secondary-bg-color);
     display: flex;
-    width: 10rem;
+    width: auto;
     justify-content: space-between;
     align-items: center;
 }
@@ -105,6 +107,7 @@ button:hover {
 }
 
 .chat-box form {
+
     font-style: normal;
     display: flex;
     width: 100%;
@@ -127,4 +130,83 @@ button:hover {
     color: var(--primary-text-color);
     background-color: var(--primary-bg-color);
     margin-left: 0.5rem;
+}
+.profile-menu {
+    position: relative;
+    background-color: var(--secondary-bg-color);
+}
+
+.sub-menu-wrap {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: var(--primary-bg-color);
+    border: 1px solid var(--secondary-bg-color);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    width: 200px;
+}
+
+.sub-menu {
+    padding: 0.5rem;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 0.5rem;
+    border-bottom: 1px solid var(--secondary-bg-color);
+}
+
+.user-pic-main{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-pic-sub{
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.user-info h2 {
+    margin: 0;
+    font-size: 1rem;
+}
+
+.dropdown-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.dropdown-menu li {
+    border-bottom: 1px solid var(--secondary-bg-color);
+}
+
+.dropdown-menu li a {
+    display: block;
+    padding: 0.5rem;
+    color: var(--secondary-text-color);
+    text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+    background-color: var(--hover-font-color);
+    color: var(--primary-bg-color);
+}
+
+.profile-menu:hover .sub-menu-wrap {
+    display: block;
 }

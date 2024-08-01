@@ -1,0 +1,15 @@
+<%-include("partials/navbar.ejs")%>
+
+<h2>login</h2>
+
+<form action="/login" method="post">
+    <label>
+        <input type="text" name="username" placeholder="Name">
+    </label>
+    <label>
+        <input type="password" name="password" placeholder="Password">
+    </label>
+    <input type="submit">
+</form>
+
+<%-include("partials/footer.ejs")%>
