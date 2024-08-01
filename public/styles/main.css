@@ -33,13 +33,11 @@ li, a, button {
 }
 
 header {
-    margin-top: 0.5rem;
     background-color: var(--secondary-bg-color);
     display: flex;
     justify-content: space-between;
     padding: 0.8rem 1%;
-    width: 80rem;
-    border-radius: 5rem;
+    width: 100%;
     align-items: center;
 }
 
